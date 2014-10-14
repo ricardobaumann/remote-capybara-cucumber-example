@@ -46,23 +46,32 @@ Given I am on "http://tst-sms-connect.ci.zenvia360.com/system/"
 * choose option "managerUserId" with "alias_capybara"
 * click on id "saveManager"
 * click on id "deactivatePermissions"
+* click on "Sim" Button if exists
 * click on id "activatePermissions"
 * click on id "deactivateAggregate"
+* click on "Sim" Button if exists
 * click on id "activateAggregate"
 * click on id "deactivateAggregatePermissions"
+* click on "Sim" Button if exists
 * click on id "activateAggregatePermissions"
 * click on id "deactivateFileUpload"
+* click on "Sim" Button if exists
 * click on id "activateFileUpload"
 * click on id "deactivateFTP"
+* click on "Sim" Button if exists
 * click on id "activateFTP"
 * click on id "deactivatePredictiveClean"
+* click on "Sim" Button if exists
 * click on id "activatePredictiveClean"
 * click on id "deactivateArqRetFormCompl"
+* click on "Sim" Button if exists
 * click on id "activateArqRetFormCompl"
 * click on id "deactivateAggregateLimit"
+* click on "Sim" Button if exists
 * click on id "activateAggregateLimit"
 * click on id "deactivateArqRetFormCompl"
+* click on "Sim" Button if exists
 * click on id "activateArqRetFormCompl"
-* click on "Sair" Text
+* click on "Sair" Text if exists
 
 

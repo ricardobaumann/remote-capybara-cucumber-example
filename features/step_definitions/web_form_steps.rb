@@ -22,12 +22,28 @@ Given /^click on "(.*?)" Button$/ do |button|
   click_button button
 end
 
+Given /^click on "(.*?)" Button if exists$/ do |button|
+  begin
+    click_button button
+  rescue
+
+  end
+end
+
 Given /^click on input with src like "(.*?)"$/ do |src|
   find(:xpath, "//input[contains(@src,'#{src}')]").click
 end
 
 Given /^click on "(.*?)" Text$/ do |text|
   click_on text
+end
+
+Given /^click on "(.*?)" Text if exists$/ do |text|
+  begin
+    click_on text
+  rescue
+
+  end
 end
 
 Given /^click on "(.*?)" element with text "(.*?)"$/ do |element, text|
