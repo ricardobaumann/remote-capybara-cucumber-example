@@ -50,7 +50,7 @@ Given /^click on id "(.*?)"$/ do |id|
   begin
     find(:xpath, "//*[contains(@id,'#{id}')]").click
   rescue
-    Kernel.puts e.message
+    Kernel.puts "failed"
   end
 end
 
