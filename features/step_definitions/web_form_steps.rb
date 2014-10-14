@@ -31,7 +31,8 @@ Given /^click on "(.*?)" Text$/ do |text|
 end
 
 Given /^click on "(.*?)" element with text "(.*?)"$/ do |element, text|
-  find(:xpath, "//#{element}[contains(text(),'#{text}')]").click
+  element = find(:xpath, "//#{element}[contains(text(),'#{text}')]")
+  element.click if element
 end
 
 Given /^Wait for "(.*?)" seconds$/ do |seconds|
@@ -50,7 +51,7 @@ Given /^click on id "(.*?)"$/ do |id|
   begin
     find(:xpath, "//*[contains(@id,'#{id}')]").click
   rescue
-    Kernel.puts "failed"
+    #Kernel.puts "failed"
   end
 end
 
