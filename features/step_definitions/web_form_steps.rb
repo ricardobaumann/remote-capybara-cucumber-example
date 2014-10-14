@@ -3,6 +3,7 @@ Before do
     	Capybara::Selenium::Driver.new(app, :browser => :chrome)
 	end
 	Capybara.current_driver = :selenium_chrome
+  Capybara.default_selector = :xpath
 end
 
 Given /^I am on "([^"]*)"$/ do |page|
@@ -37,13 +38,22 @@ Given /^Wait for "(.*?)" seconds$/ do |seconds|
   sleep seconds.to_i
 end
 
-Given /^choose option "(.*?)"  with "(.*?)"$/ do |select, text|
+Given /^choose option "(.*?)" with "(.*?)"$/ do |select, text|
   select text, from: select
 end
 
 Given /^check "(.*?)"$/ do |check_name|
   check check_name
 end
+
+Given /^click on id "(.*?)"$/ do |id|
+  begin
+    find(:xpath, "//*[contains(@id,'#{id}')]").click
+  rescue
+    Kernel.puts e.message
+  end
+end
+
 
 Then /^I should see the text "(.*?)"$/ do |text|
   page.should have_content(text)
