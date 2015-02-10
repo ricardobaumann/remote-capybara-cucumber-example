@@ -13,7 +13,7 @@ end
 
 Given /^loop on fights$/ do
 	begin
-		10.times do
+		1000.times do
 		steps %{
 			* click on "Missão" Text
 			* Wait for "15" seconds
@@ -27,7 +27,7 @@ Given /^loop on fights$/ do
 	  	}		
 	end
 	rescue
-		sleep 10
+		sleep 60
 		retry
 	end
 end
