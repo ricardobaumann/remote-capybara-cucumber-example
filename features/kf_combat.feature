@@ -1,4 +1,4 @@
-Feature: Knight fight mission
+Feature: Knight fight combats
 
 Background:
 	Given I am on ""

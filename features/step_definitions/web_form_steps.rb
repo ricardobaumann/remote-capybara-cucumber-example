@@ -35,6 +35,7 @@ Given /^click on input with src like "(.*?)"$/ do |src|
 end
 
 Given /^click on "(.*?)" Text$/ do |text|
+  #Kernel.puts "Clicking on #{text}"
   click_on text
 end
 
