@@ -34,6 +34,10 @@ Given /^click on input with src like "(.*?)"$/ do |src|
   find(:xpath, "//input[contains(@src,'#{src}')]").click
 end
 
+Given /^click on img with src like "(.*?)"$/ do |src|
+  find(:xpath, "//img[contains(@src,'#{src}')]").click
+end
+
 Given /^click on "(.*?)" Text$/ do |text|
   #Kernel.puts "Clicking on #{text}"
   click_on text

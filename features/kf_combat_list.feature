@@ -9,6 +9,6 @@ Background:
 	* fill form entry "password" with "01081951"
 	* click on "Login" Button
 
-Scenario: Do the random fights
-	* loop on fights
+Scenario:  Atack the list
+	* atack the character
 

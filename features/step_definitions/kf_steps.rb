@@ -49,3 +49,46 @@ Given /^loop on tavern$/ do
 		retry
 	end
 end
+
+Given /^atack the character$/ do
+  characters = ["472003276",
+	" 472003250 ", 
+	" 472003238 ",
+	" 472003199 ",
+	" 472003191 ",
+	" 472006640 ",
+	" 472004593 ",
+	" 472000165 ",
+	" 472001747 ",
+	" 472003733 ",
+	" 472002864 ",
+	" 472003210 ",
+	" 472003675 ",
+	" 472000652 ",
+	" 472008335 ",
+	" 472001744 ",
+	" 472001364 ",
+	" 472000538 ",
+	" 472007358 ",
+	" 472004416 ",
+	" 472007844 ",
+	" 472007696 ",
+	" 472000515 ",
+	" 472007282 ",
+	" 472001965 ",
+	" 472004814 ",
+	" 472001424 "]
+
+	characters.each do |id|
+
+		steps %{
+			Given I am on "http://br2.knightfight.moonid.net/index.php?ac=showuser&showuserid=#{id.strip! || id}"
+			* Wait for "15" seconds
+			* click on img with src like "img/lang/br/btn_angriff.jpg"
+			* Wait for "15" seconds
+			* click on input with src like "img/lang/br/btn_angriff.jpg"
+			* Wait for "18000" seconds
+		}
+
+	end
+end
