@@ -81,14 +81,19 @@ Given /^atack the character$/ do
 
 	characters.each do |id|
 
-		steps %{
-			Given I am on "http://br2.knightfight.moonid.net/index.php?ac=showuser&showuserid=#{id.strip! || id}"
-			* Wait for "15" seconds
-			* click on img with src like "img/lang/br/btn_angriff.jpg"
-			* Wait for "15" seconds
-			* click on input with src like "img/lang/br/btn_angriff.jpg"
-			* Wait for "18000" seconds
-		}
+		begin
+			steps %{
+				Given I am on "http://br2.knightfight.moonid.net/index.php?ac=showuser&showuserid=#{id.strip! || id}"
+				* Wait for "15" seconds
+				* click on img with src like "img/lang/br/btn_angriff.jpg"
+				* Wait for "15" seconds
+				* click on input with src like "img/lang/br/btn_angriff.jpg"
+				* Wait for "360" seconds
+			}
+		rescue => e
+			Kernel.puts e.message
+			next
+		end
 
 	end
 end
