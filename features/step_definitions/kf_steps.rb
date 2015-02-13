@@ -88,7 +88,7 @@ Given /^atack the character$/ do
 				* click on img with src like "img/lang/br/btn_angriff.jpg"
 				* Wait for "15" seconds
 				* click on input with src like "img/lang/br/btn_angriff.jpg"
-				* Wait for "360" seconds
+				* Wait for "1000" seconds
 			}
 		rescue => e
 			Kernel.puts e.message
