@@ -34,7 +34,7 @@ end
 
 Given /^loop on tavern$/ do
 	begin
-		24.times do
+		100.times do
 			click_on "Taverna"	
 			sleep 15	
 			click_on "1 - 3 Horas"
@@ -51,7 +51,13 @@ Given /^loop on tavern$/ do
 end
 
 Given /^atack the character$/ do
-  characters = ["472003276",
+  characters = ["472003276","2147174627","472003533","472002137","472005228","472000921",
+  	"472006275",
+  	"472000180",
+  	"472007646",
+  	"472001638",
+  	"472003050",
+  	"472003454",
 	" 472003250 ", 
 	" 472003238 ",
 	" 472003199 ",
