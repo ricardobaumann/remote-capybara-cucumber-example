@@ -1,7 +1,7 @@
 # encoding: iso-8859-1
 # language: pt-BR
 Given /^loop on missions$/ do
-	12.times do
+	10.times do
 		steps %{
 			* click on "Missão" Text
 			* choose option "gesinnung" with "Cavaleiro das sombras em missão de saque"
