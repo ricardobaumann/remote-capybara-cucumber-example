@@ -35,10 +35,11 @@ end
 Given /^loop on tavern$/ do
 	begin
 		100.times do
+			visit "http://br2.knightfight.moonid.net/index.php?ac=job"
 			click_on "Taverna"	
-			sleep 15	
+			sleep 30	
 			click_on "1 - 3 Horas"
-			sleep 15
+			sleep 30
 			Kernel.puts "passou horas"
 			find(:xpath, "//img[contains(@src,'img/lang/br/btn_annehmen.jpg')]").click
 			sleep 3600
@@ -52,6 +53,18 @@ end
 
 Given /^atack the character$/ do
   characters = [
+  	"472005502",
+  	"472002400",
+  	"472007220",
+  	"472008229",
+  	"472007261",
+  	"472000112",
+  	"472004013",
+  	"472001557",
+  	"472001318",
+  	"472005887",
+  	"472002024",
+  	"472000269",
   	"472005341",
   	"472005502",
   	"472004135",
@@ -102,7 +115,6 @@ Given /^atack the character$/ do
 	" 472007844 ",
 	" 472007696 ",
 	" 472000515 ",
-	" 472007282 ",
 	" 472001965 ",
 	" 472004814 ",
 	" 472001424 "]
